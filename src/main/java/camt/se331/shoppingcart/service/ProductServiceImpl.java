@@ -11,7 +11,7 @@ import java.util.List;
  * Created by Dto on 2/8/2015.
  */
 @Service
-public class ProductServiceImpl implements ProductService {
+public class ProductServiceImpl implements  ProductService {
 
     @Autowired
     ProductDao productDao;
@@ -41,5 +41,10 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Product updateProduct(Product product) {
         return productDao.updateProduct(product);
+    }
+
+    @Override
+    public List<Product> getProductsByName(String name) {
+        return productDao.getProductsByName(name);
     }
 }

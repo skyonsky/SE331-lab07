@@ -9,6 +9,7 @@ import java.util.List;
  * Created by Dto on 2/7/2015.
  */
 public interface ProductRepository extends JpaRepository<Product,Long> {
-
-    }
+    public List<Product> findByNameLike(String name);
+    public List<Product> findByNameContaining(String name);
+}
 
