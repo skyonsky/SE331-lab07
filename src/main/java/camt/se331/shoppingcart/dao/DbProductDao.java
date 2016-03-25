@@ -3,13 +3,16 @@ package camt.se331.shoppingcart.dao;
 import camt.se331.shoppingcart.entity.Product;
 import camt.se331.shoppingcart.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 /**
  * Created by SKY on 3/25/2016.
  */
+@Repository
 public class DbProductDao implements ProductDao {
+    @Autowired
     ProductRepository productRepository;
     @Override
     public List<Product> getProducts() {

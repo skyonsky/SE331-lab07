@@ -11,8 +11,11 @@ import java.util.List;
 /**
  * Created by Dto on 2/8/2015.
  */
+
+@CrossOrigin
 @RestController
 @RequestMapping("/")
+
 public class ProductController {
     @Autowired
     ProductService productService;
