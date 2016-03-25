@@ -21,7 +21,7 @@ productService.service('totalCalService',function() {
     }
 })
 productService.factory('queryProductService',function($resource) {
-    return $resource('/getProduct/?name=:name',
+    return $resource('http://localhost:8080/getProduct/?name=:name',
         {
             query: {method: 'GET', params: {name: ''}, isArray: true}
 
