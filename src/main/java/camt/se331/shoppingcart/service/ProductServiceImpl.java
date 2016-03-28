@@ -46,5 +46,10 @@ public class ProductServiceImpl implements  ProductService {
     @Override
     public List<Product> getProductsByName(String name) {
         return productDao.getProductsByNameContainingIgnoreCase(name);
+
     }
+    //@Override
+    //public List<Product> getProductsByNameOrDescription(String name,String description) {
+    // return productDao.getProductsByNameOrDescriptionContainingIgnoreCase(name,description);
+  // }
 }

@@ -16,5 +16,7 @@ public interface ProductDao {
     Product deleteProduct(Product product);
     Product updateProduct(Product product);
     List<Product> getProductsByNameContainingIgnoreCase(String name);
+    //List<Product> getProductsByNameOrDescriptionContainingIgnoreCase(String name,String description );
+
 
 }
