@@ -8,9 +8,10 @@ var shoppingCartControllers = angular.module('shoppingCartControllers', ['shoppi
 shoppingCartControllers.controller('showShoppingCartController',
     ['$scope', 'shoppingCartService', '$location', '$rootScope', '$routeParams',
         function ($scope, shoppingCartService, $location, $rootScope, $rootParams) {
+            $scope.cart=[];
             var id = $rootParams.id;
             shoppingCartService.get({id: id}, function (data) {
-                $scope.cart = data;
+                $scope.cart = data;console.log($scope.cart);
             })
 
             $scope.$on('$locationChangeStart', function (event) {
