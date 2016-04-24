@@ -73,7 +73,6 @@ class PersistenceContext {
         boneCPDataSource.setPartitionCount(3);
         boneCPDataSource.setAcquireIncrement(5);
         boneCPDataSource.setStatementsCacheSize(100);
-
         return boneCPDataSource;
 
     }

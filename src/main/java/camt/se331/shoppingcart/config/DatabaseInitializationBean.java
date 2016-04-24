@@ -42,8 +42,10 @@ public class DatabaseInitializationBean implements InitializingBean {
 
             };
 
+            //Product id 1
             productRepository.save(Arrays.asList(initProduct));
             productRepository.save(new Product(1l, "Kindle", "the good book reader", 6900.00));
+
             SelectedProduct[] initSelectedProduct = {
                     new SelectedProduct(initProduct[2], 5),
                     new SelectedProduct(initProduct[4], 2),
@@ -56,6 +58,7 @@ public class DatabaseInitializationBean implements InitializingBean {
             shoppingCart.setId(1L);
             shoppingCartRepository.save(shoppingCart);
 
+            //Product id 2
             ShoppingCart shoppingCart2 = new ShoppingCart();
             SelectedProduct[] initSelectedProduct2 = {
                     new SelectedProduct(initProduct[2], 2),
